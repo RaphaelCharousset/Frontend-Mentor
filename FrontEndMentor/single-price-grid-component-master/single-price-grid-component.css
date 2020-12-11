@@ -1,0 +1,124 @@
+html {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 10;
+    text-align: justify;
+}
+body {
+    background: hsl(204, 43%, 93%);
+}
+h1 {
+    color: hsl(179, 62%, 43%) ;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+h2 {
+    color: rgb(217, 225, 57); 
+    font-size: 18px;
+}
+h2+p {
+    color: grey; 
+    opacity: 60%;
+}
+h3 {
+    color: whitesmoke;
+    font-size: 20px;
+    padding-left: 12%;
+    padding-top: 20px;
+}
+h3 + p {
+    color: lightgray; /*blanc un peu transparent ?*/
+    padding-left: 12%;
+    line-height: 120%;
+    color: white;
+}
+.text {
+    color: white;
+    opacity: 70%;
+}
+.bloc-right-line-height  {
+    color: white;
+    opacity: 60%;
+}
+
+.container {
+    height: 500px;
+    max-width: 680px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 20px 10px rgba(152, 166, 189, 0.4);
+}
+.bloc-top {
+    height: 45%;
+    background: white;
+    float: top;
+    overflow: hidden;
+    padding-left: 6%;
+}
+.intro-top {
+    line-height: 150%;
+}
+
+.bloc-left {
+    width: 50%;
+    height: 55%;
+    background: rgb(16, 170, 161);
+    float: left;
+}
+.price {
+    font-size: 32px;
+    color: whitesmoke;
+    line-height: 120%;
+}
+.month {
+    color: white;
+    padding-left: 10px;
+    line-height: 300%;
+    opacity: 50%;
+    
+}
+.button {
+    background-color: rgb(196, 219, 49);
+    color: whitesmoke;
+    font-size: 17px;
+    margin: 2% 10% 10% 10% ;
+    width: 80%;
+    height: 22%;
+    border-radius: 7px;
+    border: 0.005px solid green;
+    box-shadow: 0 10px 10px 5px rgba(0, 114, 114, 0.2);
+
+}
+
+.bloc-right {
+    width: 50%;
+    height: 55%;
+    background: hsl(179, 62%, 43%);
+    float: left;
+    font-size: 14px;
+}
+.bloc-right-line-height {
+    line-height: 165%;
+}
+
+@media (max-width: 680px) {
+    .container {
+        height: 800px;
+    }
+    .bloc-top {
+        height: 40%;
+        padding-right: 10%;
+    }
+    .bloc-left {
+        width: 100%;   
+        height: 30%;
+    }
+    .bloc-right {
+        width: 100%; 
+        height: 30%;
+    }
+}

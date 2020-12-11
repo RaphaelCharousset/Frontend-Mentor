@@ -1,0 +1,111 @@
+html {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+body {
+    background-color: hsl(0, 0%, 98%);
+    width: 1440px;
+    margin-top: 80px;
+}
+header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 500px;
+}
+h1 {
+    font-weight: 200;
+    font-size: 35px;
+    line-height: 50%;
+    color: hsl(229, 6%, 66%);
+}
+h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 75%;
+    color: hsl(234, 12%, 34%);
+}
+h2 + p {
+    font-weight: 400;
+    opacity: 0.8;
+}
+h3 {
+    font-weight: 600;
+}
+p {
+    color: hsl(229, 6%, 66%);
+}
+.container {
+    position: absolute;
+    left: 165px;
+    top: 300px;
+    width: 1125px;
+    /*background-color: khaki; POUR AIDER AU POSITIONNEMENT*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box {
+    width: 340px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 14px 10px 3px rgba(180, 202, 218, 0.4) ;
+}
+.icons {
+    float: right;
+    margin-right: 33px;
+    margin-top: 35px;
+}
+#box_left {
+    position: relative;
+    top: 80px;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+#box_right {
+    position: relative;
+    top: 80px;
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+#box_bottom {
+    position: relative;
+    top: 38px;
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+#box_top {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+.bloc_text {
+    padding-left: 30px;
+}
+
+@media (max-width: 700px) {
+    body {
+        max-width: 375px;
+    }
+
+    header {
+        max-width: 375px;
+        margin-left: auto;
+        text-align: center;
+    }
+    .container {
+        max-width: 375px;
+        flex-direction: column;
+        left: auto;
+        top: 280px;
+        height: 1200px;
+    }
+    .box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 , h2 
+    {
+        font-size: 25px;
+    }
+    #box_left, #box_bottom, #box_right {
+        top: 0;
+    }
+}
