@@ -1,0 +1,133 @@
+html {
+    width: 1440px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    width: 75%;
+    margin: auto;
+}
+.container_all {
+    display: grid;
+    grid-template-columns: 25% [line1] 25% [line2] 25% [line3] 25%;
+    grid-template-rows: 50% [row1] 50%;
+    gap: 20px 20px;
+    margin-top: 70px;
+    /*background-color: tomato; AIDE AU POSITIONNEMENT */
+}
+    .container_jeanette, .container_kira {
+        background-color: white;
+    }
+    .container_daniel, .container_jeanette, .container_jonathan, .container_kira, .container_patrick {
+        border-radius: 10px;
+    }
+    .container_daniel{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: hsl(263, 55%, 52%);
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position: top right 100px;
+    }
+    .container_jonathan {    
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: hsl(217, 19%, 35%);
+    }
+    .container_jeanette {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        box-shadow: 50px 55px 20px -40px rgba(0, 0, 0, 0.1);
+    }
+    .container_patrick {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: hsl(219, 29%, 14%);
+    }
+    .container_kira {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        box-shadow: 50px 55px 20px -40px rgba(0, 0, 0, 0.1);
+    }
+img {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    width: 30px;  
+}
+    .img_daniel {
+        border: 2px solid rgba(255, 255, 255, 0.2) ;
+    }
+    .img_patrick {
+        border: 2px solid hsl(263, 55%, 52%);
+    }
+.title_light_gray_left, .title_light_grayish_blue, .title_light_gray_center {
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+    h1 {
+        position: relative;
+        font-size: 12px;
+        left: 17px;
+        opacity: 0.9;
+        line-height: 130%;
+    }
+    .verified_graduate {
+        opacity: 0.7;
+        font-size: 11px;
+        font-weight: 500;
+    }
+.h2_light_gray, .h2_light_grayish_blue, .h2_light_grayish_blue_jeanette {
+    clear: both;
+    margin-left: 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    }
+.h2_light_grayish_blue_jeanette {
+    margin-right: 30px;
+}
+.container_jeanette, .container_kira {
+    color: hsl(217, 19%, 35%);
+}
+.container_daniel, .container_jonathan, .container_patrick {
+    color: hsl(0, 0%, 90%);
+}
+    .p_light_grayish_blue, .p_light_gray {
+        font-size: 11.5px;
+        opacity: 0.7;
+        line-height: 150%;
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+
+    @media (max-width: 500px) {
+        html {
+            width: 370px;
+        }
+        body {
+            width: 370px;
+        }
+        .container_all {
+            display: flex;
+            flex-direction: column;
+            width: 88%;
+            margin-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+            .container_daniel{
+                background-position: top right 25px;
+            }
+    }
