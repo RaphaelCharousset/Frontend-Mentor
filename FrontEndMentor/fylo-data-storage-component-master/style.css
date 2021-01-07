@@ -1,0 +1,19 @@
+html {
+    font-family: Raleway, sans-serif;
+    background-color: hsl(229, 57%, 11%);
+}
+body {
+    width: 1440px;
+}
+.container_all {
+    width: 800px;
+    
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    background-color: springgreen;
+}
+.container_left, .container_right {
+    background-color: hsl(228, 56%, 26%);
+    color: white;
+}
