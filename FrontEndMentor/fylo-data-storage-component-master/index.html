@@ -32,12 +32,21 @@
     </div>
    
     <div class="container_right">
-    <p>You’ve used 815 GB of your storage</p>
-    <div class="buble">
-      <p>185 GB Left</p>
-    </div>
-    <p>0 GB</p>
-    <p>1000 GB</p>
+      <div class="bubles_container">
+        <div class="buble">
+          <p><span class="darker_buble_text">185</span> <span class="buble_text"> GB LEFT</span></p>
+        </div>
+        <div class="buble_comment"></div>
+      </div>
+      <div class="container_progress">
+        <p><span class="light_opacity">You’ve used</span> <span class="brighter_text"> 815 GB</span> <span class="light_opacity"> of your storage</span></p>
+        <div class="progress_bar">
+          <progress min="0" max="1000" value="815">815</progress>
+          <div class="progress_point"></div>
+        </div>
+        <p class="left_progress"><span class="light_opacity"> 0 GB</span></p>
+        <p class="right_progress"><span class="light_opacity"> 1000 GB</span></p>
+      </div>
     </div>
   </div>
 </html>
