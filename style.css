@@ -1,0 +1,35 @@
+html {
+    width: 1440px;
+}
+body {
+    font-family: Rubik, sans-serif;
+}
+    .container-background {
+       width: 1440px;
+       height: 702px; 
+       display: inline-block;
+       overflow: hidden;
+       margin-bottom: -500px;
+    }
+        .purple-background {
+            width: 450px;
+            height: 700px;
+            background: linear-gradient(to bottom,
+            hsl(293, 100%, 63%)15%,
+            hsl(264, 100%, 61%)100%);
+            background-repeat: no-repeat;
+            border-radius: 0 0 50% 50% / 0 0 25% 25% ;
+            margin-left: -100px;
+            margin-top: -200px;
+
+        }
+        .grey-background {
+            width: 400px;
+            height: 800px;
+            background: lightgrey;
+            border-radius: 200px;
+            float: right;
+            margin-right: -100px;
+            /*IL FAUT LE CENTRE AVEC UN MARGIN TOP NEGATIF. 
+            COURAGE JEAN JACQUES !*/
+        }
