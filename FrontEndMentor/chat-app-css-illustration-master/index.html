@@ -58,10 +58,9 @@
       </div>
     
       <div class="receiving-photos">
-        <img alt="dog photo 1" src="images/dog-image-1.jpg">
-        <img alt="dog photo 2" src="images/dog-image-2.jpg">
-        <img alt="dog photo 3" src="images/dog-image-3.jpg">
-
+        <img alt="dog photo 1" src="images/dog-image-1.jpg" class="dog_photo">
+        <img alt="dog photo 2" src="images/dog-image-2.jpg" class="dog_photo">
+        <img alt="dog photo 3" src="images/dog-image-3.jpg" class="dog_photo">
       </div>
 
       <div class="receiving-text">
@@ -76,17 +75,24 @@
       <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
     </div>
     
-    <div class="price-proposition">
       <form method="POST" action="traitement.php">
-        <p>
-          <input type="radio" name="price-cost"> <label for="30min">30 minute walk $29</label>   
-        </p>
-        <p>
-          <input type="radio" name="price-cost"> <label for="1hour">1 hour walk $49</label>
-        </p>
+        <div class="price-proposition"> 
+          <label for="button1" class="radio_label">
+            <input class="radio_input" type="radio" name="price-cost" value="30min" id="button1">
+            <div class="radio_radio"></div>
+            30 minute walk <span class="price">$29</span>
+        </label>   
+        </div>
+        <div class="price-proposition">
+          <label for="button2" class="radio_label">
+            <input class="radio_input" type="radio" name="price-cost" value="30min" id="button2"> 
+            <div class="radio_radio"></div>
+            1 hour walk <span class="price">$49</span> 
+          </label>
+        </div>
       </form>
 
-    </div>
+    </>
     </main>
     
     <footer>
