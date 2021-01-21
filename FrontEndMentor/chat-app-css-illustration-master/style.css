@@ -16,7 +16,7 @@ body {
             width: 450px;
             height: 700px;
             background: linear-gradient(to bottom,
-            hsl(293, 100%, 63%)15%,
+            hsl(293, 100%, 63%)-10%,
             hsl(264, 100%, 61%)100%);
             background-repeat: no-repeat;
             border-radius: 0 0 50% 50% / 0 0 25% 25% ;
@@ -39,7 +39,7 @@ body {
 
     .container-cellphone {
         width: 220px;
-        height: 420px;
+        height: 450px;
         background-color: hsl(270, 20%, 96%); 
         overflow: hidden; /* TODO : enlever cette ligne */
         left: 300px;
@@ -124,7 +124,7 @@ body {
             background-color:hsla(270, 30%, 92%);
             color: hsl(276, 55%, 52%);
             margin-left: 10px;
-            line-height: 1.5;
+            line-height: 1.3;
             margin-top: 5px;
             margin-bottom: 5px;
         }
@@ -136,7 +136,7 @@ body {
             color: hsl(271, 15%, 43%);
             margin-right: 5px;
             margin-left: auto;
-            line-height: 1.5;
+            line-height: 1.3;
             box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.43);
         }
             .receiving-text p {
@@ -166,6 +166,7 @@ body {
             font-size: 8px;
             position: relative;
             cursor: pointer;
+            border-radius: 10px 10px 10px 5px;
         }
            .price-proposition * {
                vertical-align: middle;
@@ -204,3 +205,42 @@ body {
             .radio_input:checked + .radio_radio::after{
                 transform: scale(1);
             }
+        .container_writing_zone {
+            width: 90%;
+            height: auto;
+            background-color: white;
+            font-size: 8px;
+            line-height: 1.2;
+            display: inline-block;
+            margin-left: 11px;
+            margin-top: 5px;
+            color: hsl(206, 6%, 79%);
+            border-radius: 20px;
+        }
+            .container_writing_zone p {
+                padding: 4px 20px;
+                display: inline-block;
+            }
+            .submit_button {
+                display: inline-block;
+                height: 27px;
+                width: 27px;
+                background-color: hsl(271, 36%, 24%);
+                vertical-align: middle;
+                border-radius: 50%;
+                margin-left: 60px;
+                position: relative;
+            }
+                .arrow_submit {
+                    vertical-align: middle;
+                    display: inline-block;
+                    border-top: 3px solid white;
+                    border-right: 3px solid white;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                    position: absolute;
+                    top: 35%;
+                    bottom: 35%;
+                    left: 35%;
+                    right: 35%;
+                }
