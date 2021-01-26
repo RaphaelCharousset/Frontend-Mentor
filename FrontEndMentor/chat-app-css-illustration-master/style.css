@@ -4,6 +4,9 @@ html {
 body {
     font-family: Rubik, sans-serif;
     font-size: 16px;
+    padding: 0;
+    margin: 0;
+    background-color: hsl(270, 20%, 96%); 
 }
     .container-background {
        width: 1440px;
@@ -29,20 +32,19 @@ body {
             background: linear-gradient(to top,
             hsl(293, 100%, 63%)15%,
             hsl(264, 100%, 61%)100%);
-            opacity: 0.05;
+            opacity: 0.02;
             border-radius: 200px;
             float: right;
             margin-right: -100px;
             margin-top: -500px;
-            /* TODO : TROUVER LA BONNE COULEUR ou opacity */
         }
 
     .container-cellphone {
         width: 220px;
         height: 450px;
         background-color: hsl(270, 20%, 96%); 
-        overflow: hidden; /* TODO : enlever cette ligne */
-        left: 300px;
+        overflow: hidden;
+        left: 296px;
         top: 100px;
         position: relative;
         border-radius: 15px;
@@ -118,7 +120,6 @@ body {
             font-size: 8px;
             max-width: 57%;
             width: fit-content;
-            border-radius: 10px; /* TODO border radius pas le même partout ! */
         }
         .sending-text {
             background-color:hsla(270, 30%, 92%);
@@ -127,6 +128,7 @@ body {
             line-height: 1.3;
             margin-top: 5px;
             margin-bottom: 5px;
+            border-radius: 10px 10px 10px 3px;
         }
             .sending-text p {
                 padding: 5px 5px;
@@ -138,6 +140,7 @@ body {
             margin-left: auto;
             line-height: 1.3;
             box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.43);
+            border-radius: 10px 10px 3px 10px;
         }
             .receiving-text p {
                 padding: 5px 7px;
@@ -244,3 +247,20 @@ body {
                     left: 35%;
                     right: 35%;
                 }
+    .container_marketing {
+        position: relative;
+        left: 700px;
+        bottom: 200px;
+        width: 440px;
+        height: auto;
+    }
+        .container_marketing h1 {
+            color: hsl(271, 36%, 24%);
+            font-size: 35px;
+            line-height: 1.5;
+        }
+        .container_marketing p {
+            color: hsl(270, 7%, 64%);
+            opacity: 0.9;
+            line-height: 1.6;
+        }
