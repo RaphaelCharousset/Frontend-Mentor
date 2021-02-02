@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html, body {
     padding: 0;
     margin: 0;
@@ -29,6 +32,7 @@ p {
     rgba(0, 0, 0, 1) 25%,
     rgba(0, 0, 0, 0.5) 100%
     );
+    z-index: 10000;
 }
     .header_logo {
         display: inline-block;
@@ -89,7 +93,7 @@ p {
         text-decoration: none;
     }
         .intro a:hover {
-            background: hsl(176, 68%, 64%); /* ! TROUVER LA BONNE COULEUR*/
+            background: hsl(176, 68%, 75%); /* ! TROUVER LA BONNE COULEUR*/
             font-size: 1.2rem;
             transition: 1s;
         }
@@ -177,13 +181,12 @@ p {
             font-size: 0.8rem;
         }   
             .testimonial:first-child {
-                z-index: 2;
+                z-index: 1;
             }
             .quotes {
                 position: absolute;
                 top: -35px;
                 left: 20px;
-                z-index: 1;
             }
             .quotes img {
                 width: 100%;
@@ -194,34 +197,130 @@ p {
     margin: 100px auto;
     text-align: center;
     background: hsl(217, 28%, 15%);
+    z-index: 4;
+    position: relative;
 }
     .main_footer h2 {
         font-size: 2em;
         padding-top: 1em;
-
     }
     .main_footer p {
         margin: auto 10% 30px 10%;
     }
     .main_footer form {
         padding-bottom: 40px;
+        width: 85%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
     }
     .main_footer input {
-        width: 50%;
-        padding: 0.9rem 0 0.9rem 2.5rem;
-    }
-    .main_footer input, .main_footer button {
+        width: 65%;
+        padding: 1rem 0 1rem 2.5rem;
         border-radius: 50px;
     }
-    .main_footer button {
-        padding: 0.9rem 2.5rem 0.9rem 2.5rem;
+    .main_footer input, .main_footer_button {
+        display: inline-block;
     }
+    .main_footer_button button{
+        padding: 1rem 2.5rem 1rem 2.5rem;
+        border-radius: 50px;
+        background: linear-gradient(to right,
+        hsl(176, 68%, 64%),
+        hsl(198, 60%, 50%)
+        );
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+        .main_footer_button button:hover {
+            background: hsl(176, 68%, 75%);
+        }
 footer {
+    position: relative;
+    z-index: 3;
     background: hsl(216, 53%, 9%);
+    padding-top: 200px;
+    margin-top: -227px;
 }
-/* ! C'est chiant !!!!! ça reste tout en bas */
-
+        .footer_logo {
+            display: block;
+            margin-bottom: 25px;
+        }
+        .footer_logo img {
+            margin-left: 7.55%;
+        }
+    .footer_container {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        justify-content: space-between;
+    }
+        .maps {
+            width: 28%;
+            display: flex;
+        }
+            .maps_icon {
+                margin: 5px 20px 0 0;
+            }
+        .footer_contact, .links {
+            flex-direction: column;
+        }
+            .phone::before {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background: url(images/icon-phone.svg);
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+            .phone {
+                margin-bottom: 15px;
+            }
+            .mail::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 16px;
+                background: url(images/icon-email.svg);
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+        .links a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            margin: 8px;
+        }
+        .links a:hover {
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: .3s;
+        }
+        .links a:first-child{
+            margin-top: 0;
+        }
+        .social_network {
+            width: 11%;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+            .social_network img {
+                padding: 4px;
+                border: 1px solid white;
+                border-radius: 50%;
+            }
+            .social_network img:hover {
+                background: linear-gradient(to right,
+                hsl(176, 68%, 64%),
+                hsl(198, 60%, 50%)
+                );
+                border: 5px groove white;
+            }
 .attribution { 
+    margin-top: 80px;
     font-size: 11px; 
     text-align: center; 
     color: gray;
@@ -234,3 +333,5 @@ footer {
     font-size: 1.2em;
     transition: 1s;
 }
+
+/*! On passe aux media query !
