@@ -59,7 +59,7 @@ h1, h2, h3 {
         width: 90%;
         margin: 1rem auto 4rem auto;
     }
-    .main_header a {
+    .get_started_btn {
         color: white;
         background: var(--Pink);
         text-decoration: none;
@@ -134,15 +134,13 @@ article {
                 width: 75%;
                 margin-bottom: 40px;
             }
-        /*! dimensionner les images, gérer les flex, le article_text. */
-        /*! order pour article 2 sur desktop*/
         /* BACKGROUND ARTICLE*/       
 .article_container:first-of-type article,
 .article_container:last-of-type article {
     background: content-box var(--Very_Pale_Blue);
 }
-    .article_container:first-of-type::before,
-    .article_container:first-of-type::after{
+    .article_container:first-of-type::before, .article_container:first-of-type::after,
+    .article_container:last-of-type::before, .article_container:last-of-type::after{
         content: '';
         display: block;
     }
@@ -154,11 +152,6 @@ article {
             background: center / cover no-repeat url(images/bg-section-bottom-mobile-1.svg);
             width: 100%; height: 52px;
         }
-    .article_container:last-of-type::before,
-    .article_container:last-of-type::after{
-        content: '';
-        display: block;
-    }
         .article_container:last-of-type::before {
             background: center / cover no-repeat url(images/bg-section-top-mobile-2.svg);
             width: 100%; height: 103px;
@@ -167,7 +160,43 @@ article {
             background: center / cover no-repeat url(images/bg-section-bottom-mobile-2.svg);
             width: 100%; height: 101px;
         }
-
+            /* MAIN FOOTER*/   
+.main_footer {
+    width: 80%;
+    margin: 30px auto 200px auto;
+    text-align: center;
+}
+    .main_footer h1 {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+            /* FOOTER*/  
+.footer_container {
+    background: var(--Very_Dark_Cyan);
+} 
+footer::before {
+    content: '';
+    display: block;
+    width: 100%; height: 53px;
+    background: center / contain url(images/bg-footer-top-mobile.svg);
+}
+.footer_container * {
+    color: white;
+}
+.footer_container {
+    display: flex;
+    flex-direction: column;
+}
+    .footer_newsletter {
+        order: 1;
+    }
+    .footer_contact {
+        order: 2;
+    }
+    .signature {
+        order: 3;
+    }
+    /*! ON EN EST AU DESIGN DU FOOTER*/
 /*! CA RESTE EN DESSOUS */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
