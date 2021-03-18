@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap'); /* FONT FAMILY IMPORT */
+
+:root {
+    /* PRIMARY TEXT COLORS */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    /* GARDIENT COLORS */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /* NEUTRAL TEXT COLORS */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    
+    /* DIVIDERS COLORS */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+
+    /* RESET AND GLOBAL SETTINGS*/
+    box-sizing: content-box;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom,
+        var(--Soft-violet) 33%,
+        var(--Soft-blue) 99%
+    );
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+main {
+    width: 90%; 
+    margin: 40% auto 20% auto;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 27px 37px 0px rgba(0, 0, 0, 0.25) ;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ IMAGE ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container-image {
+    width: 100%; height: 110px;
+    text-align: center;
+}
+.container-image svg{
+    margin-top: -32%;
+    margin-left: -30px;
+    filter: drop-shadow(0 25px 0 hsla(240, 6%, 50%, 0.1));
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ TEXT ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.FAQ-title {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container-FAQ {
+    width: 90%;
+    margin: auto auto 50px;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    h2 {
+        font-weight: normal;
+        font-size: 1.2rem;
+    }
+    .container-arrow { /*ARROW BUTTON*/
+        content: url(images/icon-arrow-down.svg);
+        height: 100%;
+        float: right;
+    }
+    .container-FAQ h2:hover {
+        color: var(--Soft-red);
+        cursor: pointer;
+    }
+
+.container-FAQ hr {
+    height: 1px;
+    border: none;
+    background-color: var(--Light-grayish-blue);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ JS CLASS ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.visible {
+    display: block;
+}
+.invisible {
+    display: none;
+}
+.h2-bold {
+    font-weight: bold;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ SIGNATURE ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: white;
+}
+.attribution a { 
+    color: var(--Soft-violet); 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: bold;
+}
+.attribution a:hover {
+    text-decoration: underline;
+    color: hsl(273, 73%, 82%);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ MEDIA QUERY ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ @media screen and (min-width: 600px) {
+     main {
+         flex-direction: row;
+         width: 85%;
+         justify-content: space-around;
+         margin: 10% auto;
+     }
+     .container-image svg{
+         position: absolute;
+         margin-top: 0;
+         margin-left: 0;
+         left: -75px;
+    }
+    .container-FAQ, .container-image {
+        flex: none;
+    }
+    .container-image {
+        width: 30%; height: 196px;
+        align-self: center;
+    }
+   
+    .container-FAQ {
+        width: 50%;
+        margin: 25px auto 50px;
+    }
+    .FAQ-title {
+        text-align: left;
+        margin-bottom: 2.8rem;
+    }
+ }
