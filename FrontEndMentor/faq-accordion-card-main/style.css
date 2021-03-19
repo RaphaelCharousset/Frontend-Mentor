@@ -66,11 +66,13 @@ main {
     width: 90%;
     margin: auto auto 50px;
 }
+
 .question {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
     h2 {
         font-weight: normal;
         font-size: 1.2rem;
@@ -79,10 +81,12 @@ main {
         content: url(images/icon-arrow-down.svg);
         height: 100%;
         float: right;
+        transition: transform 0.3s;
     }
     .container-FAQ h2:hover {
         color: var(--Soft-red);
         cursor: pointer;
+        text-decoration: underline;
     }
 
 .container-FAQ hr {
