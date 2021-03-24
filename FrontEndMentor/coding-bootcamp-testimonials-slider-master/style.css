@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+html, body {
+    height: 100%;
+}
+:root {
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    margin: 0;    
+    background: no-repeat bottom left / 75% url(images/pattern-curve.svg);
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    min-height: 10rem;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ PICTURES ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container-picture {
+    background: center / contain url(images/pattern-bg.svg) no-repeat;
+    text-align: center;
+}
+    .picture {
+        width: 75%;
+        margin: auto;
+        padding: 12.5% 0;
+        position: relative;
+    }
+        .picture img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: -10px 35px 40px -5px rgba(32,32,70,0.25);
+        }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ CHANGE BTN ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.change {
+    position: absolute;
+    width: 30%; height: 35px;
+    left: 50%; bottom: calc(12.5% - 9.5px);
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+    #prev, #next {
+        cursor: pointer;
+        height: 100%;
+        padding: 0 8px;
+    }
+    #prev {
+        background: no-repeat center / contain url(images/icon-prev.svg);
+    }
+    #next {
+        background: no-repeat center / contain url(images/icon-next.svg);
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ TEXT ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container-text {
+    color: var(--Dark-Blue);
+    text-align: center;
+    background: no-repeat top center / 70px url(images//pattern-quotes.svg);
+}
+    .container-text div p:first-child {
+        font-size: 0.6rem;
+        opacity: 0.8;
+        padding-top: 30px;
+    }
+    .signature h1 {
+        font-size: 0.6rem;
+        margin-bottom: 0;
+    }
+    .signature p {
+        font-size: 0.5rem;
+        opacity: 0.5;
+        margin-top: 0;
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (min-width: 768px) {
+    :root {
+        font-size: 32px;
+    }
+    main {
+        height: 95%;
+        padding-bottom: 0;
+    }    
+        .big-container {
+            position: relative;
+            height: 100%;
+        }
+        .container-text {
+            position: absolute;
+            top: 10vw;
+            left: 5%;
+            width: 60%;
+            text-align: left;
+            background: no-repeat top 5% left 25% / 100px url(images/pattern-quotes.svg);
+        }
+            .signature * {
+                display: inline-block;
+            }
+                .signature h1 {
+                    font-size: 0.5rem;
+                }
+                .signature p {
+                    font-size: 0.4rem;
+                }
+
+        .container-picture {
+            position: absolute;
+            right: 0;
+            width: 50%;
+        }
+            .change {
+                width: 25%;
+                left: 20%;
+            }
+            
+            #prev {
+                background: no-repeat center / 70% url(images/icon-prev.svg);
+            }
+            #next {
+                background: no-repeat center / 70% url(images/icon-next.svg);
+            }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        font-size: 48px;
+    }
+    .change {
+        width: 20%;
+        left: 20%;
+    }
+    
+    #prev {
+        background: no-repeat center / contain url(images/icon-prev.svg);
+    }
+    #next {
+        background: no-repeat center / contain url(images/icon-next.svg);
+    }
+}
+
+@media screen and (min-width: 1330px) {
+    :root {
+        font-size: 64px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ JS ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.invisible {
+    display: none;
+}
+
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration:  0.8s;
+}
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ ATTRIBUTION ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.attribution { 
+    color: var(--Dark-Blue);
+    font-size: 0.3rem; 
+    text-align: center; 
+}
+.attribution a { 
+    color: var(--Grayish-Blue) /*hsl(228, 45%, 44%)*/; 
+    text-decoration: none;
+    text-shadow: 1px 1px 1px var(--Dark-Blue);
+    padding: 0 1px;
+}
+
+.attribution a:hover {
+    text-shadow: none;
+    background-color: var(--Dark-Blue);
+    opacity: 0.3;
+    transition: all 0.5s;
+}
