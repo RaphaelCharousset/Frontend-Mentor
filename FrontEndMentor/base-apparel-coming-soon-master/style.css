@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+:root {
+    font-family: 'Josefin Sans', sans-serif;
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+html {
+    min-height: 100vh;
+    background-color: #FFF1F1;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: var(--Desaturated-Red);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ LOGO  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+header {
+    background: white;
+}
+
+    .header img {
+        width: 33%;
+        padding: 15px 0 1.5rem 10%;
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ HERO MOBILE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.hero-mobile img {
+    width: 100%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ MAIN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    main h1 {
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: 2rem 0 1rem 0;
+        letter-spacing: 0.8rem;
+    }
+
+        main h1 span {
+            color:black;
+            font-weight: 700;
+        }
+
+    main p {
+        letter-spacing: 0.05rem;
+    }
+.hero-desktop {
+    display: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ EMAIL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.email {
+    text-align: center;
+}
+
+.email form {
+    position: relative;
+    display: inline-block;
+    width: 100%; height: 40px;
+}
+
+.email form input {
+    width: calc(100% - 2px); height: 38px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.email form label {
+    position: absolute;
+    top: 0;  right: -6px;
+    height: 40px;
+}
+
+.email form label button {
+    width: 60px; height: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ ATTRIBUTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+    padding: 0.2rem;
+}
+.attribution a:hover {
+    background-color: coral;
+    border-radius: 5px;
+}
