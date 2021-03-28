@@ -7,17 +7,20 @@
     --Soft-Red: hsl(0, 93%, 68%);
     
     --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    font-size: 12px;
 }
 
 html {
     min-height: 100vh;
-    background-color: #FFF1F1;
+    background: linear-gradient(135deg,
+        hsl(0, 0%, 100%),
+        hsl(0, 100%, 98%)
+    );
 }
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 16px;
     color: var(--Desaturated-Red);
 }
 
@@ -49,8 +52,10 @@ main {
     main h1 {
         text-transform: uppercase;
         font-weight: 300;
+        font-size: 2rem;
         margin: 2rem 0 1rem 0;
         letter-spacing: 0.8rem;
+        line-height: 1.1;
     }
 
         main h1 span {
@@ -60,6 +65,9 @@ main {
 
     main p {
         letter-spacing: 0.05rem;
+        line-height: 1.5;
+        padding-bottom: 1.3rem;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
     }
 .hero-desktop {
     display: none;
@@ -78,29 +86,192 @@ main {
 }
 
 .email form input {
-    width: calc(100% - 2px); height: 38px;
-    padding: 0;
+    width: calc(100% - 2px - 2rem); height: 38px;
+    font-size: 1.1rem;
+    padding-left: 2rem;
     margin: 0;
-    border: 1px solid black;
+    border: 1px solid hsla(0, 6%, 24%,0.3);
     border-radius: 20px;
+    background-color: inherit;
+    /*! padding-left: 3rem;  BOUFFE SUR LA DROITE !!! */
 }
+    .email form input::placeholder {
+        color: var(--Desaturated-Red);
+        opacity: 0.4;
+        font-size: 1.2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    }
 .email form label {
     position: absolute;
-    top: 0;  right: -6px;
+    top: 1px;  right: -5px;
     height: 40px;
 }
 
 .email form label button {
-    width: 60px; height: 100%;
+    width: 50px; height: 100%;
     padding: 0;
     border: none;
     border-radius: 20px;
+    box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.btn-bc {
+    background: linear-gradient(135deg,
+        hsl(0, 80%, 86%),
+        hsl(0, 74%, 74%)
+    );
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+@media screen and (min-width: 768px) {
+    .hero-mobile {
+        display: none;
+    }
+    .hero-desktop {
+        display: block;
+    }
+    .big-container {
+        display: flex;
+    }
+        .text-container {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            background-image: url(images/bg-pattern-desktop.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+            header {
+                height: 10%;
+                background: none;
+            }
+            main {
+                height: 90%;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                margin: auto;
+            }
+                main h1 {
+                    font-size: 3.8rem;
+                }
+                main p {
+                    font-size: 1.2em;
+                    padding-right: 5rem;
+                }
+            .email {
+                padding-right: 5rem;
+            }
+                .email form, .email form label, .email form label button {
+                    height: 40px;
+                }
+                .email form input {
+                    height: 38px;
+                }
+                .email form input, .email form label button {
+                    border-radius: 20px;
+                }
+                .email form label button {
+                    width: 60px;
+                }
+                    label button svg {
+                        transform: scale(1.2);
+                    }
+        .desktop-image {
+            width: 40%;
+        }
+            .desktop-image img {    
+                width: 100%;
+            }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        font-size: 16px;
+    }
+        .email form, .email form label, .email form label button {
+            height: 60px;
+        }
+        .email form input {
+            height: 58px;
+        }
+        .email form input, .email form label button {
+            border-radius: 30px;
+        }
+        .email form label button {
+            width: 100px;
+        }
+            label button svg {
+                transform: scale(1.5);
+            }
+}
+
+@media screen and (min-width: 1440px) {
+    main p {
+        padding-right: 6.5rem;
+        margin: 2rem 0 3rem;
+        line-height: 1.8;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ JS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@keyframes fadeOut {
+    form {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+}
+
+.wrong-button {
+    content: url(images/icon-error.svg);
+    position: absolute;
+    top: 50%; right: 150px;
+    transform: translateY(-50%);
+    width: 40px; height: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.wrong-msg {
+    color: var(--Soft-Red);
+    position: absolute;
+    top: 130%;
+}
+
+.btn-bc-wrong-side {
+    background: linear-gradient(135deg,
+        hsl(0, 100%, 93%),
+        hsl(0, 73%, 83%)
+    );
+}
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ ATTRIBUTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+footer {
+    margin-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg,
+        hsl(0, 100%, 99%),
+        hsl(0, 100%, 97%)
+    );
+}
+
 .attribution { 
-    font-size: 11px; 
+    padding: 2rem 0;
+    font-size: .8rem; 
     text-align: center; 
+    margin: 0;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
@@ -108,6 +279,7 @@ main {
     padding: 0.2rem;
 }
 .attribution a:hover {
+    transition: all 0.3s ease-in-out;
     background-color: coral;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 }
