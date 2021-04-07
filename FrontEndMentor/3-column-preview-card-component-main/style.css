@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    Font-size: 15px;
+}
+
+body {
+    min-width: 300px;
+    background-color: hsl(0, 0%, 95%);
+}
+main {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.article1 {
+    background: hsl(31, 77%, 52%);
+}
+.article2 {
+    background: hsl(184, 100%, 22%);
+}
+.article3 {
+    background: hsl(179, 100%, 13%);
+}
+
+.article-content {
+    min-height: 440px;
+    margin-left: 10%;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+
+    h1 {
+        color: hsl(0, 0%, 95%);
+        text-transform: uppercase;
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        opacity: 0.8;
+        line-height: 1.8;
+    }
+
+    button {
+        padding: 12px 30px 15px 30px;
+        border-radius: 40px;
+        border: none;
+        background: hsl(0, 0%, 95%);
+        cursor: pointer;
+    }
+
+        .article1 button {
+            color: hsl(31, 77%, 52%);
+        }
+
+        .article2 button {
+            color: hsl(184, 100%, 22%);
+        }
+
+        .article3 button {
+            color: hsl(179, 100%, 13%);
+        }
+
+@media screen and (min-width:1024px) {
+    main {
+        display: flex;
+    }
+    button:hover {
+        max-height: 46px;
+        background: inherit;
+        border: 2px solid hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+        animation: shake 3s infinite;
+    }
+}
+    
+.attribution { 
+    font-size: 0.9rem; 
+    text-align: center; 
+    color: rgb(50, 50, 50);
+}   
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+    padding: 5px 3px;
+    white-space: nowrap;
+}
+    .attribution a:hover {
+        animation: animation 3s infinite;
+        border-radius: 15px;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+@keyframes animation {
+    from {
+        background-color: hsl(31, 77%, 52%);
+    } 33% {
+        background-color: hsl(184, 100%, 22%);
+    } 66% {
+        background-color: hsl(179, 100%, 13%);
+    } to {
+        background-color: hsl(31, 77%, 52%);
+    }
+}
+@keyframes shake {
+    5%, 45% {
+        transform: rotate(5deg);
+      }
+      
+    10%, 40% {
+        transform: rotate(-5deg);
+      }
+    
+    15%, 25%, 35% {
+        transform: rotate(2deg);
+      }
+    
+    20%, 30% {
+        transform: rotate(-2deg);
+      }
+    55% {
+        transform: rotate(0);
+    }
+}
