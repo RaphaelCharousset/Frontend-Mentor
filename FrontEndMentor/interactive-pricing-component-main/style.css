@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+html, body {
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+body {
+    background-image: url(images/bg-pattern.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100vw 50vh;
+    background-color: hsl(230, 100%, 99%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+h1, main * {
+    color: hsl(227, 35%, 25%);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ BIG CONTAINER ~~~~~~~~~~~~~~~~~*/
+
+.big-container {
+    width: 90%;
+    margin: 2rem auto 0;
+    border-radius: 10px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~*/
+
+header {
+    background: center / auto no-repeat url(images/pattern-circles.svg);
+    padding-bottom: 2rem;
+}
+    header h1 {
+        font-size: 1.6rem;
+        padding: 2rem 0 1rem;
+    }
+    header p {
+        color: hsl(225, 20%, 60%);
+        line-height: 1.8;
+    }
+    
+/* ~~~~~~~~~~~~~~~~~~~ MAIN ~~~~~~~~~~~~~~~~~*/
+
+main {
+    background: white;
+    margin-top: 2rem;
+    box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.05);
+}
+    main hr {
+        border: none;
+        height: 1px;
+        background: hsl(223, 50%, 87%);
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~ OFFER CONTAINER ~~~~~~~~~~~~~~~~~*/
+
+.offer-container {
+    color: hsl(225, 20%, 60%);
+}
+.pageviews, .amount-month, .payment-choice, .main-footer-left{
+    opacity: 0.75;
+}
+    .offer-top-container {
+        display: flex;
+        flex-direction: column;
+    }
+        .pageviews {
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin: 2rem auto;
+        }
+        .amount {
+            margin: 2rem auto 0;
+        }
+            .big-amount {
+                font-size: 2rem;
+                font-weight: 800;
+            }
+    .payment-choice {
+        display: flex;
+        width: 70%;
+        margin: 3rem auto;
+        justify-content: space-around;
+        font-size: 0.8rem;
+        max-width: 310px;
+    }
+    /* ~~~~~~~~~~~~~~~~~~~ INPUT ~~~~~~~~~~~~~~~~~*/
+
+.cursor-container {
+    width: 300px; height: 45px;
+    margin: 0 auto;
+    position: relative;
+}
+     .cursor-container input {
+        width: 100%;
+        cursor: pointer;
+        position: absolute;
+        top: 0; left: 0;
+        height: 40px;
+    }
+        .cursor-container input {
+            appearance: none;
+            background: linear-gradient(to right,
+            hsl(174, 77%, 80%) 0%, /*! MODIF LES % SELON INPUT.VALUE EN JS */
+            hsl(224, 65%, 95%) 0%
+            );
+            height: 10px; 
+            border-radius: 5px;
+            padding: 20px 0;
+            box-shadow: 0 15px 0 0 white inset, 0 -15px 0 0 white inset;
+        }
+        .cursor-container input::-webkit-slider-thumb {
+            opacity: 0;
+        }
+    .cursor-container .cursor {
+        width: 40px; height: 40px;
+        background: center / 60% no-repeat url(images/icon-slider.svg), hsl(174, 86%, 45%);
+        border-radius: 50%;
+        box-shadow: 0 5px 20px 2px hsla(174, 86%, 45%, 0.8);
+        position: absolute;
+        left: 2%; top: 0;
+        transform: translate(-50%);
+        cursor: pointer;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~ SWITCH BTN ~~~~~~~~~~~~~~~~~*/
+
+    .button-choice {
+        width: 43px; height: 22px;
+    }
+    .switch-button {
+        height: 14px;
+    }
+    .switch { /* label */
+        width: 43px; height: 22px;
+        background: hsl(223, 50%, 87%);
+        position: relative;
+        padding: 4px 0; 
+        cursor: pointer;
+        border-radius: 11px;
+        display: inline-block;
+    }
+        .switch input {
+            width: 100%;
+            appearance: none;
+        }
+    
+        .slider {
+            position: absolute;
+            left: 8%; top: 4px; /*left à 92% si input.value = checked */
+            width: 14px; height: 14px;
+            background: white;
+            border-radius: 50%;
+            transition: left 0.5s ease-in-out;
+            transform: translateX(0);
+            transition: left .5s ease-in-out, transform .5s ease-in-out;
+        }
+
+/* ~~~~~~~~~~~~~~~~~~~ YEARLY ~~~~~~~~~~~~~~~~~*/
+
+.yearly {
+    position: relative;
+}
+    .discount {
+        position: absolute;
+        left: 105%; top: 50%;
+        transform: translateY(-50%);
+        color: hsl(15, 100%, 70%);
+        background: hsl(14, 92%, 95%);
+        font-size: 0.8em;
+        padding: 1px 0.5rem;
+        border-radius: 7px;
+        font-weight: 800;
+    }
+    .desktop-discount {
+        display: none;
+        color: hsl(15, 100%, 70%);
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~ MAIN FOOTER ~~~~~~~~~~~~~~~~~*/
+
+    .main-footer-left ul {
+        margin: 1.5rem auto 1.5rem;
+    }
+        .main-footer-left ul li {
+            list-style-type: none;
+            font-size: 0.75rem;
+            margin: 0.8rem auto;
+        }
+            .main-footer-left ul li::before {
+                content: url(images/icon-check.svg);
+                width: 9px; height: 8px;
+                margin-right: 1rem;
+            }
+    .main-footer-right button {
+        background: hsl(227, 35%, 25%);
+        border: solid 1px black;
+        color: hsl(226, 100%, 87%);
+        font-size: 0.7rem;
+        padding: 0.7rem 3rem;
+        border-radius: 19px;
+        letter-spacing: 0.5px;
+        font-weight: 800;
+        font-family: inherit;
+        margin:0.5rem auto 2rem;
+        cursor: pointer;
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~ ATTRIBUTION ~~~~~~~~~~~~~~~~~*/
+
+.attribution { 
+    color: hsl(227, 35%, 25%);
+    margin-top: 2rem;
+    font-size: .7rem; 
+    text-align: center; 
+}
+.attribution a { 
+    text-decoration: none;
+    color: hsl(174, 86%, 45%);
+    padding: 0.2em 0.4em;
+    border-radius: 10px;
+    transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+    .attribution a:hover {
+        background: hsl(227, 35%, 25%);
+        color: hsl(230, 100%, 99%); 
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~ RESPONSIVE ~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 1024px) {
+    header br {
+        display: none;
+    }
+    main {
+        width: 500px;
+        margin: 3rem auto;
+    }
+    .offer-container, .main-footer {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .offer-top-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+        .pageviews, .amount {
+            width: 50%; height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+            .pageviews, .amount-month {
+                font-size: 1.2rem;
+            }
+        .pageviews {
+            order: 1;
+            margin: 0;
+        }
+        .amount {
+            order: 2;
+            margin: 0;
+        }
+            .pageviews-content {
+                align-self: flex-start;
+            }
+            .amount-content {
+                align-self: flex-end;
+            }
+            .discount {
+                width: 84px;
+            }
+            .desktop-discount {
+                display: inline-block;
+            }
+        .cursor-container {
+            order: 3;
+            width: 100%;
+        }
+    .main-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .main-footer-left ul li {
+            text-align: left;
+        }
+        .main-footer-right button {
+            margin: 0;
+        }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~ JS ~~~~~~~~~~~~~~~~~*/
+
+.switch-active {
+    background-color: hsl(174, 86%, 45%);
+}
+.slider-active {
+    left: 92%;
+    transform: translateX(-100%);
+    transition: left .5s ease-in-out, transform .5s ease-in-out;
+}

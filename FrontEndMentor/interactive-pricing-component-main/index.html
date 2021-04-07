@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+<body>
+  <div class="big-container">
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. <br>
+        No credit card required. 
+      </p>
+    </header>
+
+    <main>
+      <div class="offer-container">
+        <div class="offer-top-container">
+          <div class="pageviews"> 
+            <div class="pageviews-content">
+              <span id="number-of-pageviews"></span> Pageviews
+            </div>
+          </div>
+          
+          <div class="cursor-container">
+            <input type="range" min="1" max="5" step="1" value="1" id="range-input" draggable="true">
+            <div class="cursor"></div>
+          </div>
+  
+          <div class="amount">
+            <div class="amount-content"><span class="big-amount">$<span id="dollar-amount"></span></span> <span class="amount-month">/ month</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-choice">
+          <div class="monthly">Monthly Billing</div>
+          <div class="button-choice">
+            <div class="switch-button">
+              <label class="switch">
+                <input type="checkbox" id="checkbox-input">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="yearly">Yearly Billing <span class="discount">-25% <span class="desktop-discount">discount</span></span></div>
+        </div>
+      </div>
+      
+      <hr>
+
+      <div class="main-footer">
+        <div class="main-footer-left">
+          <ul>
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+        </div>
+        <div class="main-footer-right">
+          <button>Start my trial</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Raphael-Cha" target="_blank">Raphaël Charousset</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
