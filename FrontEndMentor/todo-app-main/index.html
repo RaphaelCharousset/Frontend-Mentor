@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Todo</h1>
+      <div class="change-mode to-dark-mode"></div>
+    </header>
+  
+    <div class="new-task">
+      <div class="new-task-content">
+        <button class="task-btn newtask-btn"></button>
+        <input type="text" name="newtask" id="new-task-input" placeholder="Create a new todo...">
+      </div>
+    </div>
+  
+    <div class="task-container">
+      <div class="task-done"></div>
+      <div class="new-tasks-container"></div>
+      <!--<div class="task-created"> --><!--archi de la creation d'une task--> <!--newTaskContainer-->
+        <!--<div class="task-created-content"> --><!--newTaskContent-->
+          <!--<button class="task-btn"></button>
+          <div class="task-created-text">10 minutes meditation</div>
+        </div>
+        <hr>--> <!--newHr-->
+      <!--</div>-->
+      
+
+      <div class="task-container-bottom">
+        <div class="item-left">
+          <span id="items-left"><!-- Add dynamic number --></span> items left
+        </div>
+        <div class="selection-container">
+          <div class="selection">
+            <button id="all-btn" class="blue-btn">All</button>
+            <button id="active-btn">Active</button>
+            <button id="completed-btn">Completed</button>
+          </div>
+        </div>
+        <div class="clear-completed">
+          <button id="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+    </div>
+    
+    <footer>Drag and drop to reorder list</footer>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a>
+      Coded by <a href="https://github.com/Raphael-Cha" target="_blank">Raphaël Charousset.</a>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
