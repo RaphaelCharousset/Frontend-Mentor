@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+* { 
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+:root {
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    min-height: 100vh;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+button {
+    cursor: pointer;
+    letter-spacing: 4px;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%; height: 100px;
+    padding: 0 10px;
+    margin: 50px auto;
+    border: solid 2px hsl(217, 16%, 45%);
+    border-radius: 10px;
+}
+header div {
+    height: 80px; width: 100px;
+}
+    .header-title {
+        background: center / contain no-repeat url(images/logo.svg);
+        }
+    .header-score-container {
+        background: white;
+        text-align: center;
+        border-radius: 5px;
+    }
+        .header-score-container p:first-child {
+            margin: 10px auto 5px;
+        }
+        .header-score-container p {
+            margin: 0;
+            font-size: 0.8rem;
+            line-height: 1;
+        }
+        #score-counting {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+/* ~~~~~~~~~~~~~~~~~~ RULES ~~~~~~~~~~~~~~~~~~ */
+
+.rules-big-container {
+    width: 100vw; height: calc(100vh + 50px);
+    position: absolute;
+    top: -50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.rules-small-container {
+    width: 500px; height: 550px;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+    .rules-small-container-header {
+        width: 85%; height: 13%;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .rules-small-container-header p {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .rules-small-container-header button {
+            background: white;
+            border: none;
+            color: hsla(217, 16%, 45%, 0.5);
+            width: 50px; height: 50px;
+            text-transform: lowercase;
+            font-size: 4rem;
+            letter-spacing: 0;
+            line-height: 48px;
+        }
+
+    .rules-small-container-footer {
+        width: 75%; height: 70%;
+        margin: auto;
+        background: center / 100% no-repeat url(images/image-rules.svg);
+    }
+/* ~~~~~~~~~ CHOOSING ITEM & ITEMS DEFINITION ~~~~~~~~~ */
+
+.choosing-item {
+    margin: auto;
+    width: 500px; height: 500px;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
+    background: center / 66% no-repeat url(images/bg-triangle.svg);
+}
+    .choosing-item .rock-image-container {
+        width: auto; height: auto;
+        grid-column: 4 / span 4;
+        grid-row: 7 / span 4;
+    }
+    .choosing-item .paper-image-container {
+        width: auto; height: auto;
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 4;
+    }
+    .choosing-item .scisors-image-container {
+        width: auto; height: auto;
+        grid-column: 7 / span 4;
+        grid-row: 1 / span 4;
+    }
+
+.rock-image-container, .paper-image-container, .scisors-image-container {
+    width: 250px; height: 250px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -10px 0 0 rgba(0, 0, 0, 0.2) inset;
+    cursor: pointer;
+}
+    .rock-image-container {
+        background: linear-gradient(to top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    }
+    .paper-image-container {
+        background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    }
+    .scisors-image-container {
+        background: linear-gradient(to top, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    }
+.rock-image, .paper-image, .scisors-image {
+    width: 80%; height: 80%;
+    border-radius: 50%;
+}
+    .rock-image {
+        background: center / 40% no-repeat url(images/icon-rock.svg), white;
+    }
+    .paper-image {
+        background: center / 40% no-repeat url(images/icon-paper.svg), white;
+    }
+    .scisors-image {
+        background: center / 40% no-repeat url(images/icon-scissors.svg), white;
+    }
+
+/* ~~~~~~~~~~~~~~~~~~ PLAYING ~~~~~~~~~~~~~~~~~~ */
+
+.player-title, .house-title, .game-result {
+    color: white;
+    font-size: 1.5rem;
+}
+.game-result {
+    flex-direction: column;
+}
+    .game-result-announcement {
+        font-size: 3rem;
+        margin-bottom: 0.8rem;
+    }
+    #play-again {
+        width: 80%; height: 50px;
+        border: none;
+    }
+.game-container {
+    width: 85%; height: 350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: 25% 75%;
+}
+    .player-title {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .house-title {
+        grid-row: 1;
+        grid-column: 3;
+    }
+    .player-item, .house-item, .game-result {
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .player-item {
+        grid-column: 1;
+    }
+    .game-result {
+        grid-column: 2;
+    }
+    .house-item {
+        grid-column: 3;
+    }
+
+
+/* ~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~ */
+
+footer {
+    margin: 50px auto 15px;
+    min-width: 690px; /* A VOIR SI ON FAIT LE RESPONSIVE */
+    display: grid;
+    grid-template-columns: 15% 70% 12%;
+    grid-template-rows: 100%;
+}
+
+    #rules {
+        width: 130px; height: 40px;
+        justify-self: end;
+        grid-column: 3 / span 1;
+        background: none;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .attribution { 
+        font-size: 0.9rem; 
+        text-align: center; 
+        grid-column: 2 / span 1;
+        line-height: 40px;
+        color: white;
+    }
+    .attribution a { 
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        padding: 2px 5px;
+    }
+        .attribution a:hover {
+            background: white;
+            color: hsl(229, 25%, 31%);
+        }
+    
+/* ~~~~~~~~~~~~~~~~~~ JS ~~~~~~~~~~~~~~~~~~ */
+
+.invisible {
+    display: none;
+}
+
+.fade-in {
+    animation: 1s ease-in fadeIn;
+}
+
+.box-shadow {
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.1), 
+        0 0 0 100px rgba(255, 255, 255, 0.06), 
+        0 0 0 150px rgba(255, 255, 255, 0.03);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+  <div class="rules-big-container invisible">
+    <div class="rules-small-container">
+      <div class="rules-small-container-header">
+        <p>RULES</p>
+        <button id="close-rules">×</button>
+      </div>
+      <div class="rules-small-container-footer"></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-title"></div>
+    <div class="header-score-container">
+      <p>Score</p>
+      <p id="score-counting">0<!--Compter le score--> </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="choosing-item ">
+      <div class="rock-image-container">
+        <div class="rock-image"></div>
+      </div>
+      <div class="paper-image-container">
+        <div class="paper-image"></div>
+      </div>
+      <div class="scisors-image-container">
+        <div class="scisors-image"></div>
+      </div>
+    </div>
+    
+    <div class="game-container invisible">
+      <div class="player-title">You Picked</div>
+      <div class="house-title">The House Picked</div>
+
+      <div class="player-item"> <!--Ce qui est joué--> </div>
+      <div class="house-item"></div>
+
+      <div class="game-result">
+        <div class="game-result-announcement"></div>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+  
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/RaphaelCharousset" target="_blank">Raphaël Charousset</a>.
+    </div>
+    <button id="rules">Rules</button>
+  </footer>
+  
+  <script src="main.js"></script>
+</body>
+</html>
