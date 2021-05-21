@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, h1 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #090b1a;
+  color: white;
+}
+
+.big-container {
+  margin: 100px auto 30px;
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.left-side-container {
+  background-color: #1b1938;
+  order: 1;
+  text-align: center;
+  padding: 2.5rem 2.5rem 1.5rem;
+  flex: 65%;
+}
+.left-side-container header {
+  margin: 0 auto 1.5rem;
+}
+.left-side-container header h1 {
+  font-size: 1.8rem;
+}
+.left-side-container header h1 strong {
+  color: #aa5cdb;
+}
+.left-side-container > p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+.left-side-container footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+.left-side-container footer p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+.left-side-container footer p span {
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 1px;
+  color: white;
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.right-side-container {
+  background: #4b007a;
+  flex: 35%;
+}
+
+.attribution {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.attribution a {
+  color: #aa5cdb;
+  text-decoration: none;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+.attribution a:hover {
+  color: #090b1a;
+  background: #aa5cdb;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .big-container {
+    flex-direction: row;
+  }
+
+  .left-side-container {
+    order: 0;
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
